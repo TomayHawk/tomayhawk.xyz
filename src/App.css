@@ -5,29 +5,47 @@
 }
 
 body {
+  margin-top: 60px;
+  /* Adjust margin to account for fixed navbar height */
   font-family: Arial, sans-serif;
 }
 
 /* Navbar styling */
 .navbar {
-  top: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.2rem 20%;
   background-color: #333;
   color: white;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ff6347;
+  /* Same hover color as the links */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding-top: 1rem;
+
 }
 
 .nav-links li {
@@ -41,6 +59,19 @@ body {
   transition: color 0.3s ease;
 }
 
+.nav-search {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 1rem;
+  margin-left: -20%;
+  padding: 0.1rem 1rem;
+  /* Space inside the input box */
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1.2rem;
+}
+
 .nav-links a:hover {
   color: #ff6347;
 }
@@ -52,7 +83,48 @@ body {
   cursor: pointer;
 }
 
-/* Responsive Styling */
+/* Main container to center the boxes */
+.container {
+  display: flex;
+  justify-content: space-around;
+  /* Space between boxes */
+  align-items: center;
+  /* Align items vertically */
+  margin: 50px auto;
+  max-width: 800px;
+  /* Constrain the width of the container */
+}
+
+/* Style for interactive boxes */
+.interactive-box {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect to expand the box */
+.interactive-box:hover {
+  transform: scale(1.1);
+  /* Slightly enlarges the box */
+  background-color: #444;
+  /* Changes background color */
+}
+
+/* Optional: Adjust for responsiveness */
+@media (max-width: 600px) {
+  .interactive-box {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -75,5 +147,87 @@ body {
 
   .nav-links.active {
     display: flex;
+  }
+}
+
+.footer {
+  position: fixed;
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* Ensures responsiveness */
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  /* Each section gets equal space, but wraps on smaller screens */
+  margin: 1rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  color: #ff6347;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: #aaa;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
   }
 }
