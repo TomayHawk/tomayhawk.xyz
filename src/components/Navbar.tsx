@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../App.css';
 import './Navbar.css';
 
@@ -24,9 +25,9 @@ function Navbar() {
                 </div>
 
                 <ul className="nav-links">
-                    <li><a href="about">About</a></li>
-                    <li><a href="my-manager">MyManager</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
                 <div className="menu-toggle" onClick={toggleMenu}>
                     ☰
@@ -35,9 +36,9 @@ function Navbar() {
 
             {isMenuOpen && (
                 <ul className="mobile-menu">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/my-manager">MyManager</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             )}
         </>
