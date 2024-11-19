@@ -6,7 +6,7 @@
     color: white;
     padding: 1rem 0;
     text-align: center;
-    min-height: 20vh;
+    height: 12.2vh;
 }
 
 .footer-content {
@@ -46,6 +46,7 @@
 .footer-bottom {
     text-align: center;
     bottom: 0;
+    height: 2.8vh;
     width: 100%;
     background-color: #222;
     color: #aaa;
