@@ -6,8 +6,10 @@ function MyManager() {
             <div className="main-container">
                 <div className="tasks-box">
                     <div className="date-box">
-                        <text>Monday</text>
-                        <text>18/11</text>
+                        <div>
+                            Monday<br />
+                            18/11
+                        </div>
                     </div>
                     <div className="tasks-inner-box">
                         <div className="tasks-grids">
