@@ -18,7 +18,7 @@ function Footer() {
                 </div>
             </footer>
 
-            <div className="footer-bottom">&copy; 2024-present Tomayhawk</div>
+            <div className="footer-bottom">&copy; {new Date().getFullYear()} Tomayhawk. All rights reserved.</div>
         </>
     )
 }
