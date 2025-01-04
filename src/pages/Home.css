@@ -10,7 +10,17 @@
 .main-name-container div:last-child {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 32px;
+}
+
+.main-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: brown;
 }
 
 .main-name-text {
