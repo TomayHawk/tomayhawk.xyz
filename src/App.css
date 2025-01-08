@@ -50,6 +50,16 @@ body {
   }
 }
 
+.light {
+  --background: white;
+  --secondary-background: white;
+  --primary: white;
+  --secondary: white;
+  --tertiary: white;
+  --buttons: white;
+  --text: white;
+}
+
 .dark {
   --theme: rgb(29, 30, 32);
   --entry: rgb(46, 46, 51);
